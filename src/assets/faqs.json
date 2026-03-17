@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0001",
+    "question": "Is this tool official?",
+    "answer": "No. This is an independent student-built tool that follows the official AKTU CGPA calculation rules."
+  },
+  {
+    "id": "0002",
+    "question": "How is CGPA calculated?",
+    "answer": "CGPA is calculated using the weighted average of semester SGPAs based on their credits, following the official AKTU formula."
+  },
+  {
+    "id": "0003",
+    "question": "Do I need all semesters?",
+    "answer": "No. You can enter only the semesters you have completed. The calculator will compute CGPA based on the provided data."
+  },
+  {
+    "id": "0004",
+    "question": "Are my inputs stored?",
+    "answer": "No. All calculations happen locally in your browser and no data is stored or transmitted."
+  },
+  {
+    "id": "0005",
+    "question": "How is percentage calculated?",
+    "answer": "The equivalent percentage is calculated using the CGPA to percentage conversion formula defined by AKTU."
+  },
+  {
+    "id": "0006",
+    "question": "Can this handle backlogs?",
+    "answer": "Yes. As long as your SGPA reflects updated grades after clearing backlogs, you can enter it directly."
+  }
+]

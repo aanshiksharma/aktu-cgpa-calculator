@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* Colors */
+  --background: var(--color-taupe-950);
+  --surface: var(--color-taupe-900);
+
+  --primary: var(--color-taupe-50);
+  --secondary: var(--color-taupe-200);
+  --muted: var(--color-taupe-500);
+
+  --accent: var(--color-mauve-600);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+
+  --color-accent: var(--accent);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--secondary);
+  font-family: var(--font-body);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+
+  input {
+    @apply text-primary shadow-sm px-3 py-2 rounded-md outline-0 ring-1 ring-primary/50 focus:ring-2 focus:ring-primary/80 transition duration-300 ease-out max-w-80 min-w-45 w-full;
+  }
+}
