@@ -3,13 +3,13 @@ import Button from "../Button";
 
 function CGPACalculator() {
   const {
-    CGPA,
+    results,
     semesters,
     handleAddSemester,
     handleSGPAChange,
     handleCreditsChange,
     handleReset,
-    calculateCGPA,
+    calculate,
   } = useCGPACalculator();
 
   return (
@@ -17,7 +17,7 @@ function CGPACalculator() {
       className="flex flex-col gap-6 md:gap-8"
       onSubmit={(e) => {
         e.preventDefault();
-        calculateCGPA();
+        calculate();
       }}
     >
       <div className="bg-surface rounded-xl shadow-lg shadow-black/30 p-6 flex flex-col gap-8 md:p-8 md:gap-6 w-full">
@@ -29,7 +29,7 @@ function CGPACalculator() {
             >
               <h6 className="font-semibold">Semester {index + 1}</h6>
 
-              <div className="flex max-[460px]:flex-col justify-center min-[900px]:justify-end items-center gap-4 flex-1 w-full">
+              <fieldset className="flex max-[460px]:flex-col justify-center min-[900px]:justify-end items-center gap-4 flex-1 w-full">
                 <input
                   type="text"
                   placeholder="SGPA"
@@ -42,7 +42,7 @@ function CGPACalculator() {
                   className="flex-1"
                   onChange={(e) => handleCreditsChange(e, index)}
                 />
-              </div>
+              </fieldset>
             </div>
           ))}
         </div>
@@ -58,10 +58,13 @@ function CGPACalculator() {
 
       <div className="flex flex-wrap gap-6 md:gap-8 w-full">
         {[
-          { heading: "CGPA", body: CGPA === 0 ? "--.--" : CGPA },
+          {
+            heading: "CGPA",
+            body: results.CGPA === 0 ? "--.--" : results.CGPA,
+          },
           {
             heading: "Equivalent Percentage",
-            body: CGPA === 0 ? "--.--" : `${CGPA * 10}%`,
+            body: results.percentage === 0 ? "--.--" : `${results.percentage}%`,
           },
         ].map((item, index) => (
           <div
@@ -69,6 +72,7 @@ function CGPACalculator() {
             className="flex-1 p-6 grid content-between gap-6 bg-surface rounded-xl shadow-lg shadow-black/30"
           >
             <h5 className="text-muted">{item.heading}</h5>
+
             <p className="text-4xl md:text-5xl whitespace-nowrap">
               {item.body}
             </p>

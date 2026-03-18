@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function useCGPACalculator() {
-  const [CGPA, setCGPA] = useState(0);
+  const [results, setResults] = useState({ CGPA: 0, percentage: 0 });
   const [semesters, setSemesters] = useState([
     { SGPA: 0, credits: 0 },
     { SGPA: 0, credits: 0 },
@@ -20,7 +20,7 @@ function useCGPACalculator() {
       { SGPA: 0, credits: 0 },
       { SGPA: 0, credits: 0 },
     ]);
-    setCGPA(0);
+    setResults({ CGPA: 0, percentage: 0 });
   };
 
   const handleSGPAChange = (e, index) => {
@@ -67,12 +67,12 @@ function useCGPACalculator() {
     });
   };
 
-  const calculateCGPA = () => {
+  const calculate = () => {
     const totalCredits = semesters.reduce((acc, curr) => acc + curr.credits, 0);
 
     if (totalCredits === 0) {
       alert("Please enter at least one SGPA");
-      setCGPA(0);
+      setResults({ CGPA: 0, percentage: 0 });
       return;
     }
 
@@ -81,19 +81,19 @@ function useCGPACalculator() {
       0,
     );
 
-    setCGPA((sop / totalCredits).toFixed(2));
-
-    console.log("CGPA: ", (sop / totalCredits).toFixed(2));
+    const cgpa = (sop / totalCredits).toFixed(2);
+    const percentage = (cgpa * 10).toFixed(2);
+    setResults({ CGPA: cgpa, percentage: percentage });
   };
 
   return {
-    CGPA,
+    results,
     semesters,
     handleAddSemester,
     handleReset,
     handleSGPAChange,
     handleCreditsChange,
-    calculateCGPA,
+    calculate,
   };
 }
 
