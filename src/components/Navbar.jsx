@@ -7,28 +7,30 @@ function Navbar() {
   ];
 
   return (
-    <header className="sticky top-4 z-50 grid grid-cols-3 max-w-6xl mx-auto">
-      <Link
-        to="/"
-        className="py-2 px-4 rounded-xl bg-background/10 backdrop-blur-md mx-auto w-fit uppercase text-muted text-sm font-semibold hover:text-secondary transition duration-300"
-      >
-        aktu cgpa calculator
-      </Link>
+    <header className="sticky top-0 z-50 border-b border-muted/10 backdrop-blur-md">
+      <nav className="px-6 py-4 grid grid-cols-3 max-w-5xl mx-auto">
+        <Link
+          to="/"
+          className="uppercase text-muted text-sm font-semibold hover:text-secondary transition duration-300"
+        >
+          aktu cgpa calculator
+        </Link>
 
-      <ul className="py-2 px-4 rounded-xl bg-background/10 backdrop-blur-md mx-auto w-fit flex items-center justify-center gap-4 text-sm font-semibold">
-        {links.map((link) => (
-          <li key={link.name}>
-            <NavLink
-              to={link.href}
-              className={({ isActive }) =>
-                `${isActive ? "text-primary" : "text-muted hover:text-secondary/80"} transition duration-300 ease-out`
-              }
-            >
-              {link.name}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+        <ul className="flex items-center justify-center gap-4 text-sm font-semibold">
+          {links.map((link) => (
+            <li key={link.name}>
+              <NavLink
+                to={link.href}
+                className={({ isActive }) =>
+                  `${isActive ? "text-primary" : "text-muted hover:text-secondary/80"} transition duration-300 ease-out`
+                }
+              >
+                {link.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

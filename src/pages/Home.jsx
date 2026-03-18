@@ -8,19 +8,17 @@ function Home() {
   return (
     <>
       <section className="space-y-16 max-w-5xl mx-auto px-4 md:px-6 py-16">
-        <div id="intro" className="space-y-8">
-          <h1 className="text-2xl">AKTU CGPA Calculator</h1>
+        <article id="intro" className="">
+          <h1 className="text-4xl mb-8">AKTU CGPA Calculator</h1>
 
-          <div>
-            <p>
-              Enter the SGPA for each semester to instantly calculate your CGPA
-              and equivalent percentage.
-            </p>
-            <p className="text-muted">
-              Based on the official AKTU calculation method
-            </p>
-          </div>
-        </div>
+          <p>
+            Enter the SGPA for each semester to instantly calculate your CGPA
+            and equivalent percentage.
+          </p>
+          <p className="text-muted">
+            Based on the official AKTU calculation method
+          </p>
+        </article>
 
         <CGPACalculator />
       </section>
