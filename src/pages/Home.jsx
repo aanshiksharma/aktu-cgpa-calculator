@@ -6,7 +6,7 @@ import FAQ from "../components/Home/FAQ";
 
 function Home() {
   return (
-    <>
+    <main>
       <section className="space-y-16 max-w-5xl mx-auto px-4 md:px-6 py-16">
         <article id="intro" className="">
           <h1 className="text-4xl mb-8">AKTU CGPA Calculator</h1>
@@ -36,7 +36,7 @@ function Home() {
           ))}
         </ul>
       </section>
-    </>
+    </main>
   );
 }
 

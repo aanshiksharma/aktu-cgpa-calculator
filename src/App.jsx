@@ -11,13 +11,11 @@ function App() {
     <Router>
       <Navbar />
 
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" element={<NotFound />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
 
       <Footer />
     </Router>
