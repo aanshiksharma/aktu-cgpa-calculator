@@ -1,7 +1,7 @@
 function Formula({ highlight, LHS, RHS }) {
   return (
     <div
-      className={`formula flex items-center gap-3 ${highlight ? "w-fit border border-primary p-6 text-2xl" : ""}`}
+      className={`formula flex items-center gap-3 text-center ${highlight ? "w-fit border border-primary p-6 text-2xl" : ""}`}
     >
       <span>{LHS}</span>
       <span>=</span>
@@ -22,7 +22,7 @@ function renderRhs(RHS) {
       );
 
     case "expression":
-      return <span>{RHS.value}</span>;
+      return <span className="whitespace-nowrap">{RHS.value}</span>;
 
     default:
       return null;

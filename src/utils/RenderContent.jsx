@@ -25,9 +25,9 @@ function RenderContent(content) {
       case "link":
         return (
           <div key={content.id}>
-            <label className="text-muted font-semibold">{content.label}</label>
+            <span className="text-muted font-semibold">{content.title}</span>
             <a href={content.url} className="hover:underline">
-              {content.url}
+              {content.label}
             </a>
           </div>
         );

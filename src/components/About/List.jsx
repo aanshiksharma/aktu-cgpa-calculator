@@ -14,11 +14,9 @@ function List({ content }) {
             case "link":
               return (
                 <li key={item.id}>
-                  <label className="text-muted font-semibold">
-                    {item.label}
-                  </label>
+                  <span className="text-muted font-semibold">{item.title}</span>
                   <a href={item.url} className="hover:underline">
-                    {item.url}
+                    {item.label}
                   </a>
                 </li>
               );

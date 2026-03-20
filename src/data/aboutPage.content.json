@@ -169,13 +169,15 @@
           {
             "id": 1,
             "type": "link",
-            "label": "Official AKTU Guidelines: ",
+            "title": "Official AKTU Guidelines: ",
+            "label": "Download PDF",
             "url": "https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2122/B.%20Tech.%20Ordinance_2018-19%20(Revised).pdf"
           },
           {
             "id": 2,
             "type": "link",
-            "label": "AKTU Website: ",
+            "title": "AKTU Website: ",
+            "label": "aktu.ac.in",
             "url": "https://aktu.ac.in"
           }
         ]
@@ -195,7 +197,8 @@
       {
         "id": 2,
         "type": "link",
-        "label": "Repo link: ",
+        "title": "Repo link: ",
+        "label": "github.com/aanshiksharma/aktu-cgpa-calculator",
         "url": "https://github.com/aanshiksharma/aktu-cgpa-calculator"
       }
     ]
