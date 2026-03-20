@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "STIX Two Math";
+  src: url("/fonts/STIXTwoMath-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Poppins", sans-serif;
+  --font-formula: "STIX Two Math", serif;
 
   /* Colors */
   --background: var(--color-taupe-950);
@@ -13,6 +22,8 @@
   --muted: var(--color-taupe-500);
 
   --accent: var(--color-mauve-600);
+
+  scroll-behavior: smooth;
 }
 
 @theme {
@@ -38,6 +49,10 @@ body {
   h5,
   h6 {
     font-family: var(--font-heading);
+  }
+
+  .formula {
+    font-family: var(--font-formula);
   }
 
   input {

@@ -1,0 +1,220 @@
+[
+  {
+    "id": "about",
+    "type": "section",
+    "heading": "About this Calculator",
+    "content": [
+      {
+        "id": 1,
+        "type": "paragraph",
+        "text": "This is a simple CGPA calculator built for AKTU students. It follows the official grading rules defined by the university, so the results match how CGPA is actually computed."
+      },
+      {
+        "id": 2,
+        "type": "muted-paragraph",
+        "text": "Instead of manually calculating weighted averages, you can enter your semester-wise SGPA and total credits. The tool handles the calculation and gives you an accurate cumulative grade point average along with the equivalent percentage."
+      }
+    ]
+  },
+  {
+    "id": "cgpa-calculation",
+    "type": "section",
+    "heading": "How is CGPA Calculated?",
+    "content": [
+      {
+        "id": 1,
+        "type": "lead",
+        "text": "CGPA is a weighted average of SGPA across all semesters."
+      },
+      {
+        "id": 2,
+        "type": "paragraph",
+        "text": "AKTU calculates your CGPA by combining your SGPA from every semester, weighted by the credit load of each one. This ensures that semesters with more credits have a greater impact on your final score."
+      },
+      {
+        "id": 3,
+        "type": "paragraph",
+        "text": "The formula used is shown below:"
+      },
+      {
+        "id": 4,
+        "type": "formula",
+        "highlight": true,
+        "LHS": "CGPA",
+        "RHS": {
+          "type": "fraction",
+          "numerator": "∑ (Ci × Si)",
+          "denominator": "∑ Ci"
+        }
+      },
+      {
+        "id": 5,
+        "type": "list",
+        "heading": "Where,",
+        "items": [
+          {
+            "id": 1,
+            "type": "text",
+            "value": "Si represents the SGPA of a semester"
+          },
+          {
+            "id": 2,
+            "type": "text",
+            "value": "Ci represents the total credit hours of that semester"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "percentage-conversion",
+    "type": "section",
+    "heading": "Percentage Conversion",
+    "content": [
+      {
+        "id": 1,
+        "type": "lead",
+        "text": "Percentage is calculated by multiplying CGPA by 10."
+      },
+      {
+        "id": 2,
+        "type": "paragraph",
+        "text": "This follows the official AKTU guideline for converting CGPA into percentage."
+      },
+      {
+        "id": 3,
+        "type": "formula",
+        "highlight": true,
+        "LHS": "Equivalent Percentage",
+        "RHS": {
+          "type": "expression",
+          "value": "CGPA × 10"
+        }
+      }
+    ]
+  },
+  {
+    "id": "examples",
+    "type": "section",
+    "heading": "Example Calculation",
+    "content": [
+      {
+        "id": 1,
+        "type": "lead",
+        "text": "Here is a simple example to demonstrate how CGPA is computed."
+      },
+      {
+        "id": 2,
+        "type": "paragraph",
+        "text": "Suppose a student has the following SGPA and credit distribution across semesters."
+      },
+      {
+        "id": 3,
+        "type": "table",
+        "headers": ["Semester", "SGPA (Si)", "Credits (Ci)"],
+        "rows": [
+          ["1", "8.0", "20"],
+          ["2", "7.5", "22"],
+          ["3", "8.2", "21"]
+        ]
+      },
+      {
+        "id": 4,
+        "type": "paragraph",
+        "text": "Applying the weighted average formula:"
+      },
+      {
+        "id": 5,
+        "type": "formula",
+        "highlight": false,
+        "LHS": "CGPA",
+        "RHS": {
+          "type": "fraction",
+          "numerator": "(20×8.0) + (22×7.5) + (21×8.2)",
+          "denominator": "20 + 22 + 21"
+        }
+      },
+      {
+        "id": 6,
+        "type": "formula",
+        "highlight": false,
+        "LHS": "CGPA",
+        "RHS": {
+          "type": "expression",
+          "value": "497.2 / 63 ≈ 7.90"
+        }
+      },
+      {
+        "id": 7,
+        "type": "formula",
+        "highlight": false,
+        "LHS": "Equivalent Percentage",
+        "RHS": {
+          "type": "expression",
+          "value": "CGPA × 10 = 79.00%"
+        }
+      }
+    ]
+  },
+  {
+    "id": "references",
+    "type": "section",
+    "heading": "References",
+    "content": [
+      {
+        "id": 1,
+        "type": "list",
+        "heading": "",
+        "items": [
+          {
+            "id": 1,
+            "type": "link",
+            "label": "Official AKTU Guidelines: ",
+            "url": "https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2122/B.%20Tech.%20Ordinance_2018-19%20(Revised).pdf"
+          },
+          {
+            "id": 2,
+            "type": "link",
+            "label": "AKTU Website: ",
+            "url": "https://aktu.ac.in"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "open-source",
+    "type": "section",
+    "heading": "Open Source",
+    "content": [
+      {
+        "id": 1,
+        "type": "paragraph",
+        "text": "This project is open source and available on GitHub. Contributions and improvements are welcome."
+      },
+      {
+        "id": 2,
+        "type": "link",
+        "label": "Repo link: ",
+        "url": "https://github.com/aanshiksharma/aktu-cgpa-calculator"
+      }
+    ]
+  },
+  {
+    "id": "disclaimer",
+    "type": "section",
+    "heading": "Disclaimer",
+    "content": [
+      {
+        "id": 1,
+        "type": "paragraph",
+        "text": "This tool is not affiliated with or endorsed by Dr. A.P.J. Abdul Kalam Technical University (AKTU)."
+      },
+      {
+        "id": 2,
+        "type": "paragraph",
+        "text": "While efforts have been made to ensure accuracy, users are advised to verify results with official sources."
+      }
+    ]
+  }
+]

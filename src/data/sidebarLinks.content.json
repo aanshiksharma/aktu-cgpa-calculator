@@ -1,0 +1,30 @@
+[
+  {
+    "name": "About",
+    "href": "#about"
+  },
+  {
+    "name": "How is CGPA Calculated",
+    "href": "#cgpa-calculation"
+  },
+  {
+    "name": "Percentage Conversion",
+    "href": "#percentage-conversion"
+  },
+  {
+    "name": "Examples",
+    "href": "#examples"
+  },
+  {
+    "name": "References",
+    "href": "#references"
+  },
+  {
+    "name": "Open Source",
+    "href": "#open-source"
+  },
+  {
+    "name": "Disclaimer",
+    "href": "#disclaimer"
+  }
+]

@@ -1,7 +1,7 @@
 import CGPACalculator from "../components/Home/CGPACalculator";
 import HowItWorks from "../components/Home/HowItWorks";
 
-import faqs from "../assets/faqs.json";
+import faqs from "../data/faq.content.json";
 import FAQ from "../components/Home/FAQ";
 
 function Home() {
