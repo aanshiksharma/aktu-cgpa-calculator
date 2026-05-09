@@ -1,5 +1,5 @@
-import useCGPACalculator from "../../hooks/useCGPACalculator";
-import Button from "../Button";
+import useCGPACalculator from "../hooks/useCGPACalculator";
+import Button from "../../../shared/components/ui/Button";
 
 function CGPACalculator() {
   const {

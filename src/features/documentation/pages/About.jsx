@@ -1,9 +1,9 @@
 import useScrollSpy from "../hooks/useScrollSpy";
 
-import Sidebar from "../components/About/Sidebar";
+import RenderContent from "../components/RenderContent";
+import Sidebar from "../components/Sidebar";
 
-import aboutPageData from "../data/aboutPage.content.json";
-import RenderContent from "../utils/RenderContent";
+import aboutPageData from "../data/documentation.content.json";
 
 function About() {
   const ids = aboutPageData.map((block) => block.id);

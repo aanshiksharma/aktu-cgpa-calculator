@@ -1,6 +1,6 @@
-import Formula from "../components/About/Formula";
-import List from "../components/About/List";
-import Table from "../components/About/Table";
+import Formula from "./Formula";
+import List from "./List";
+import Table from "./Table";
 
 function RenderContent(content) {
   return content.map((content) => {

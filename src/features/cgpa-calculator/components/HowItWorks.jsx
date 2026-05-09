@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Card from "../Card";
 import { BsArrowRightShort } from "react-icons/bs";
+import Card from "./Card";
 
 function HowItWorks() {
   const features = [
