@@ -15,7 +15,11 @@ function List({ content }) {
               return (
                 <li key={item.id}>
                   <span className="text-muted font-semibold">{item.title}</span>
-                  <a href={item.url} className="hover:underline">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    className="hover:underline"
+                  >
                     {item.label}
                   </a>
                 </li>
