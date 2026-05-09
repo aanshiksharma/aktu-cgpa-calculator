@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./shared/components/layout/Navbar/Navbar";
+import Navbar from "./shared/components/layout/Navbar";
 import Footer from "./shared/components/layout/Footer";
 import Home from "./features/cgpa-calculator/pages/Home";
 import About from "./features/documentation/pages/About";
