@@ -1,8 +1,8 @@
-import CGPACalculator from "../components/Home/CGPACalculator";
-import HowItWorks from "../components/Home/HowItWorks";
+import CGPACalculator from "../components/CGPACalculator";
+import HowItWorks from "../components/HowItWorks";
+import FAQ from "../components/FAQ";
 
 import faqs from "../data/faq.content.json";
-import FAQ from "../components/Home/FAQ";
 
 function Home() {
   return (

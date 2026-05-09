@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import Navbar from "./shared/components/layout/Navbar/Navbar";
+import Footer from "./shared/components/layout/Footer";
+import Home from "./features/cgpa-calculator/pages/Home";
+import About from "./features/documentation/pages/About";
+import NotFound from "./NotFound";
 
 function App() {
   return (

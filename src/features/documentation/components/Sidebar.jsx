@@ -1,4 +1,4 @@
-import links from "../../data/sidebarLinks.content.json";
+import links from "../data/sidebarLinks.content.json";
 
 function Sidebar({ activeId, className = "" }) {
   return (
