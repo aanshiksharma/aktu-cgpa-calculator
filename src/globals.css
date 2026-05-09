@@ -12,18 +12,44 @@
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Poppins", sans-serif;
   --font-formula: "STIX Two Math", serif;
+  scroll-behavior: smooth;
 
   /* Colors */
-  --background: var(--color-taupe-950);
-  --surface: var(--color-taupe-900);
+  --background: var(--color-neutral-100);
+  --surface: var(--color-neutral-50);
 
-  --primary: var(--color-taupe-50);
-  --secondary: var(--color-taupe-200);
-  --muted: var(--color-taupe-500);
+  --primary: #000000;
+  --secondary: #000000f2;
+  --muted: hsl(0 0 0/0.5);
 
-  --accent: var(--color-mauve-600);
+  --shadow: hsl(0 0 0/0.15);
+  --accent: var(--color-emerald-200);
 
-  scroll-behavior: smooth;
+  .dark {
+    --background: var(--color-neutral-950);
+    --surface: var(--color-neutral-900);
+
+    --primary: hsl(0 0 100/0.95);
+    --secondary: hsl(0 0 100/0.8);
+    --muted: hsl(0 0 100/0.5);
+
+    --shadow: hsl(0 0 0/0.3);
+    --accent: var(--color-emerald-800);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-neutral-950);
+    --surface: var(--color-neutral-900);
+
+    --primary: hsl(0 0 100/0.95);
+    --secondary: hsl(0 0 100/0.8);
+    --muted: hsl(0 0 100/0.5);
+
+    --shadow: hsl(0 0 0/0.3);
+    --accent: var(--color-emerald-800);
+  }
 }
 
 @theme {
@@ -34,6 +60,7 @@
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
 
+  --color-shadow: var(--shadow);
   --color-accent: var(--accent);
 }
 
@@ -49,6 +76,12 @@ body {
   h5,
   h6 {
     font-family: var(--font-heading);
+    color: var(--color-primary);
+  }
+
+  h1,
+  h2 {
+    font-weight: bold;
   }
 
   .formula {
@@ -56,6 +89,6 @@ body {
   }
 
   input {
-    @apply text-primary shadow-sm px-3 py-2 rounded-md outline-0 ring-1 ring-primary/50 focus:ring-2 focus:ring-primary/80 transition duration-300 ease-out max-w-80 min-w-45 w-full;
+    @apply text-primary shadow-sm shadow-shadow px-3 py-2 rounded-md outline-0 ring-1 ring-primary/50 focus:ring-2 focus:ring-primary/80 transition duration-300 ease-out max-w-80 min-w-45 w-full;
   }
 }

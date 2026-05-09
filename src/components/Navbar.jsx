@@ -11,9 +11,12 @@ function Navbar() {
       <nav className="px-6 py-4 grid grid-cols-3 max-w-5xl mx-auto">
         <Link
           to="/"
-          className="uppercase text-muted text-sm font-semibold hover:text-secondary transition duration-300"
+          className="flex gap-2 items-center uppercase text-secondary text-sm font-semibold"
         >
-          aktu cgpa calculator
+          <span className="max-w-8 aspect-square">
+            <img className="w-full h-full" src="/logo.png" alt="" />
+          </span>
+          <span>aktu cgpa calculator</span>
         </Link>
 
         <ul className="flex items-center justify-center gap-4 text-sm font-semibold">

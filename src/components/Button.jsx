@@ -6,12 +6,11 @@ function Button({
   type = "button",
 }) {
   const styles = {
-    base: "px-3 py-2 font-bold text-sm cursor-pointer rounded-md ring-1 ring-transparent transition ease-out duration-300",
-    primary: "bg-primary/80 text-background hover:bg-primary",
+    base: "px-3.5 py-2.5 font-semibold tracking-wide text-sm cursor-pointer rounded-md ring-1 ring-transparent shadow shadow-shadow transition ease-out duration-300",
+    primary:
+      "bg-primary/80 text-background hover:bg-primary inset-shadow-shadow inset-shadow-sm",
     secondary:
-      "bg-transparent text-muted/80 !ring-muted/80 hover:text-muted hover:!ring-muted",
-    muted: "bg-muted/80 text-surface hover:bg-muted",
-    neutral: "",
+      "bg-muted/20 !ring-muted/20 text-secondary hover:bg-muted/30 hover:!ring-muted/60",
   };
 
   return (

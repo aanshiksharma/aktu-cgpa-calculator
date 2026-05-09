@@ -7,7 +7,7 @@ function RenderContent(content) {
     switch (content.type) {
       case "lead":
         return (
-          <p key={content.id} className="text-primary font-bold">
+          <p key={content.id} className="text-primary font-semibold">
             {content.text}
           </p>
         );
