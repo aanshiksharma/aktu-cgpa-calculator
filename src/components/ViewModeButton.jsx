@@ -40,19 +40,18 @@ const DropDown = ({ handleModeChange }) => {
 };
 
 function ViewModeButton() {
+  const defaultMode = modes.find((mode) => mode.value === "system");
+
   const [isFocused, setIsFocused] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [viewMode, setViewMode] = useState({
-    label: "System",
-    value: "system",
-    icon: <BsCircleHalf size={size} />,
-  });
+  const [viewMode, setViewMode] = useState(defaultMode);
 
   const wrapperRef = useRef(null);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
-    if (theme !== "system") handleModeChange(theme);
+    if (theme && ["light", "dark", "system"].includes(theme))
+      handleModeChange(theme);
 
     const handleClickOutside = (event) => {
       if (wrapperRef.current && !wrapperRef.current?.contains(event.target)) {
@@ -69,8 +68,9 @@ function ViewModeButton() {
   }, []);
 
   const SetViewMode = (modeValue) => {
-    const currentMode = modes.filter((mode) => mode.value === modeValue)[0];
-    setViewMode(currentMode);
+    const currentMode = modes.find((mode) => mode.value === modeValue);
+
+    if (currentMode) setViewMode(currentMode);
   };
 
   const handleModeChange = (mode) => {
