@@ -24,18 +24,30 @@
 
   --shadow: hsl(0 0 0/0.15);
   --accent: var(--color-emerald-200);
+}
 
-  .dark {
-    --background: var(--color-neutral-950);
-    --surface: var(--color-neutral-900);
+html.light {
+  --background: var(--color-neutral-100);
+  --surface: var(--color-neutral-50);
 
-    --primary: hsl(0 0 100/0.95);
-    --secondary: hsl(0 0 100/0.8);
-    --muted: hsl(0 0 100/0.5);
+  --primary: #000000;
+  --secondary: #000000f2;
+  --muted: hsl(0 0 0/0.5);
 
-    --shadow: hsl(0 0 0/0.3);
-    --accent: var(--color-emerald-800);
-  }
+  --shadow: hsl(0 0 0/0.15);
+  --accent: var(--color-emerald-200);
+}
+
+html.dark {
+  --background: var(--color-neutral-950);
+  --surface: var(--color-neutral-900);
+
+  --primary: hsl(0 0 100/0.95);
+  --secondary: hsl(0 0 100/0.8);
+  --muted: hsl(0 0 100/0.5);
+
+  --shadow: hsl(0 0 0/0.3);
+  --accent: var(--color-emerald-800);
 }
 
 @media (prefers-color-scheme: dark) {

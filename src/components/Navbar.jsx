@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+import ViewModeButton from "./ViewModeButton";
 
 function Navbar() {
   const links = [
@@ -8,7 +9,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-muted/10 backdrop-blur-md">
-      <nav className="px-6 py-4 grid grid-cols-3 max-w-5xl mx-auto">
+      <nav className="px-6 py-4 grid grid-cols-3 items-center max-w-5xl mx-auto">
         <Link
           to="/"
           className="flex gap-2 items-center uppercase text-secondary text-sm font-semibold"
@@ -33,6 +34,8 @@ function Navbar() {
             </li>
           ))}
         </ul>
+
+        <ViewModeButton />
       </nav>
     </header>
   );
